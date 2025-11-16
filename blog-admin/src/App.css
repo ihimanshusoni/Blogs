@@ -1,0 +1,11 @@
+#root {
+  min-height: 100vh;
+}
+
+.chakra-card {
+  border-radius: 1rem;
+}
+
+.chakra-heading {
+  font-weight: 700;
+}
