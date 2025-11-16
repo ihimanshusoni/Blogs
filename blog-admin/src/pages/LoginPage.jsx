@@ -86,18 +86,12 @@ export default function LoginPage() {
         <Button as={RouterLink} to="/" variant="ghost" size="sm">
           View Public Site
         </Button>
-        <Button as={RouterLink} to="/signup" variant="outline" size="sm">
-          Create Account
-        </Button>
-        <Button
-          as={RouterLink}
-          to="/blogs"
-          colorScheme="blue"
-          size="sm"
-          variant="solid"
-        >
-          Admin Dashboard
-        </Button>
+        {/** Signup temporarily disabled */}
+        {false && (
+          <Button as={RouterLink} to="/signup" variant="outline" size="sm">
+            Create Account
+          </Button>
+        )}
       </Flex>
       <Flex
         maxW="6xl"
@@ -176,9 +170,11 @@ export default function LoginPage() {
                   >
                     Login
                   </Button>
-                  <Button as={RouterLink} to="/signup" variant="ghost">
-                    Need an account? Sign up
-                  </Button>
+                  {false && (
+                    <Button as={RouterLink} to="/signup" variant="ghost">
+                      Need an account? Sign up
+                    </Button>
+                  )}
                 </Stack>
               </form>
             </CardBody>

@@ -4,7 +4,7 @@ import { useAuth } from "./state/AuthContext.jsx";
 import Layout from "./components/Layout.jsx";
 import PublicLayout from "./components/PublicLayout.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
-import SignupPage from "./pages/SignupPage.jsx";
+// import SignupPage from "./pages/SignupPage.jsx";
 import BlogsListPage from "./pages/BlogsListPage.jsx";
 import BlogFormPage from "./pages/BlogFormPage.jsx";
 import BlogDetailPage from "./pages/BlogDetailPage.jsx";
@@ -56,14 +56,17 @@ function App() {
           </RedirectIfAuthenticated>
         }
       />
-      <Route
-        path="/signup"
-        element={
-          <RedirectIfAuthenticated>
-            <SignupPage />
-          </RedirectIfAuthenticated>
-        }
-      />
+      {/** Signup temporarily disabled */}
+      {/**
+       * <Route
+       *   path="/signup"
+       *   element={
+       *     <RedirectIfAuthenticated>
+       *       <SignupPage />
+       *     </RedirectIfAuthenticated>
+       *   }
+       * />
+       */}
       <Route
         path="/blogs"
         element={
